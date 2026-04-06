@@ -6,30 +6,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/about.css">
 </head>
 <body>
     <div class="parent">
         <div class="div1"> 
+            <h1>Company Name</h1>
             <img src="Logo.jpg" style="width:100px">
         </div>
         <div class="div2">
-            <h1>Hello</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Colour Coordinator">Colour Coordinator</a></li>
+            </ul>
         </div>
         <div class="div3">
-            <h1>Hello</h1>
+            <h1>Meet the Team</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="div4">
-            <h1>Hello</h1>
+            <img src="" alt=placeholder></img>
+            <h4>FIRST LAST</h4>
+            <h5>ROLE</h5>
+            <p>about me</p>
         </div>
         <div class="div5">
-            <h1>Hello</h1>
+            <img src="" alt=placeholder></img>
+            <h4>FIRST LAST</h4>
+            <h5>ROLE</h5>
+            <p>about me</p>
         </div>
         <div class="div6">
-            <h1>Hello</h1>
+            <img src="" alt=placeholder></img>
+            <h4>FIRST LAST</h4>
+            <h5>ROLE</h5>
+            <p>about me</p>
         </div>
         <div class="div7">
-            <h1>hi</h1>
+            <img src="" alt=placeholder></img>
+            <h4>FIRST LAST</h4>
+            <h5>ROLE</h5>
+            <p>about me</p>
         </div>
     </div>
 </body>

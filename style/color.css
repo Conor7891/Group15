@@ -1,0 +1,80 @@
+.parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 10px;
+}
+
+.div1 { 
+    background-image: linear-gradient(45deg, yellow, hotpink,teal);
+    grid-area: 1 / 1 / 2 / 7; 
+    padding: 10px 20px;
+}
+.div2 { 
+    background-color:#000000;
+    grid-area: 2 / 1 / 3 / 7; 
+    padding: 10px 20px;
+}
+.div3 { grid-area: 3 / 2 / 4 / 6; }
+.div4 { grid-area: 4 / 2 / 7 / 3; }
+.div5 { grid-area: 4 / 3 / 7 / 4; }
+.div6 { grid-area: 4 / 4 / 7 / 5; }
+.div7 { grid-area: 4 / 5 / 7 / 6; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+    border-radius:25px;
+}
+
+ul li {
+  float: left;
+}
+
+button {
+  display: block;
+  background-color: #333333;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  float: left;
+  margin: 0;
+  padding: 15px 15px;
+  text-decoration: none;
+  transition: border-radius 0.4s ease, 
+              background-color 0.4s ease,
+              color 0.4s ease;
+}
+
+button:hover {
+  color:white;
+  background-color: #7e7e7e;
+  border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.divBody {
+    background-color: #be5959;
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./fonts/JetBrainsMonoNLNFP-Medium.woff2') format('woff2'),
+         url('./fonts/JetBrainsMonoNLNFP-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}

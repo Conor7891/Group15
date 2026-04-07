@@ -1,5 +1,5 @@
 <?php 
-$page = $_POST['page'] ?? 'index';
+$page = $_POST['page'] ?? $_GET['page'] ?? 'index';
 ?>
 
 <!DOCTYPE html>

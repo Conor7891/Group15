@@ -35,7 +35,10 @@ ul li {
 
 button {
   display: block;
-  color: #333333;
+  background-color: #333333;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
   text-align: center;
   float: left;
   margin: 0;
@@ -43,11 +46,11 @@ button {
   text-decoration: none;
   transition: border-radius 0.4s ease, 
               background-color 0.4s ease,
-              opacity 0.4s ease;
+              color 0.4s ease;
 }
 
 button:hover {
-  opacity: .6;
+  color:white;
   background-color: #7e7e7e;
   border-radius: 5px;
 }
@@ -65,6 +68,15 @@ img {
     background-color: #be5959;
 }
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./fonts/JetBrainsMonoNLNFP-Medium.woff2') format('woff2'),
+         url('./fonts/JetBrainsMonoNLNFP-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html body {
     margin: 0;
+    font-family: 'MyCustomFont', sans-serif;
 }

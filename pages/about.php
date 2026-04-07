@@ -1,14 +1,6 @@
 <?php
+$page = "about";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="../style/about.css">
-</head>
-<body>
     <div class="parent">
         <div class="div3">
             <h1>Meet the Team</h1>
@@ -46,5 +38,3 @@
             </p>
         </div>
     </div>
-</body>
-</html>

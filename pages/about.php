@@ -23,10 +23,12 @@
             </p>
         </div>
         <div class="div5">
-            <img src="" alt=placeholder></img>
-            <h4>FIRST LAST</h4>
-            <h5>ROLE</h5>
-            <p>about me</p>
+            <img src="./images/TylerProfile.JPG" alt=profile photo of the big T himself></img>
+            <h4>Tyler Couse</h4>
+            <h5>Programmer</h5>
+            <p>Tyler is an extremely devoted computer science student. He has contributed heavily to the front end. 
+                Tyler loves smoking bowls, playing overwatch, climbing 14ers, snowboarding, camping, and drinking
+            </p>
         </div>
         <div class="div6">
             <img src="" alt=placeholder></img>

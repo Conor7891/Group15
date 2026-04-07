@@ -20,8 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TITLE</title>
-    <!-- Link to your CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/color.css">
 </head>
 <body>
     <p>Enter the grid size and number of colors below to generate your coordinate sheets</p>

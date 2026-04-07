@@ -42,5 +42,4 @@ $page = $_POST['page'] ?? 'index';
         }
     ?>
 </body>
-
 </html>

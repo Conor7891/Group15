@@ -15,10 +15,12 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="div4">
-            <img src="" alt=placeholder></img>
-            <h4>FIRST LAST</h4>
-            <h5>ROLE</h5>
-            <p>about me</p>
+            <img src="./images/lukeProfile.jpg" alt=profile photo of luke></img>
+            <h4>Luke Livingston</h4>
+            <h5>Programmer</h5>
+            <p>Luke is a hard working member of this team, contributing to much of the styling for the website and some php scripting.
+                Luke enjoys hiking, bar hopping, drinking, getting drunk, driving, and sleeping all in that order
+            </p>
         </div>
         <div class="div5">
             <img src="" alt=placeholder></img>

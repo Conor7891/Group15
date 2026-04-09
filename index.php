@@ -1,5 +1,5 @@
 <?php 
-$page = $_POST['page'] ?? $_GET['page'] ?? 'index';
+$page = $_POST['page'] ?? 'index';
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $page = $_POST['page'] ?? $_GET['page'] ?? 'index';
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta http-equiv="pragma" content="no-cache">
-    <link rel="stylesheet" href="./style/<?php echo $page?>.css">
+    <link rel="stylesheet" href="./style/<? echo $page ?>.css">
 </head>
 <header>
     <nav>
@@ -42,6 +42,9 @@ $page = $_POST['page'] ?? $_GET['page'] ?? 'index';
                 break;
             case 'color':
                 include 'pages/color.php';
+                break;
+            case 'print':
+                include 'pages/print.php';
                 break;
         }
     ?>

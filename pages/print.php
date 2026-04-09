@@ -19,24 +19,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TITLE</title>
-    <link rel="stylesheet" href="./style/color.css">
+    <link rel="stylesheet" href="./style/print.css">
 </head>
 <body>
-    <p>Enter the grid size and number of colors below to generate your coordinate sheets</p>
-    <form method="POST">
-        <input type="hidden" name="page" value="color">
-        <label>Rows & Columns (1-26):</label>
-        <input type="number" min="1" max="26" name="number">
-        <label>Number of Colors (1-10):</label>
-        <input type="number" min="1" max="10" name="number_of_colors">
-        <button type="submit">Generate</button>
-    </form>
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
-        <h1>Color Selection</h1>
-        <table class="colorlist">
+    <img src = "images/Logo.jpg" alt = "PixelPushers Logo" class = "logo">
+
+    <h1>PixelPushers</h1>
+    <p>Color Selector Company</p>
+    <h1>Color Selection</h1>
+        <table>
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
-                    <td class="left">
+                    <td>
                         <select>
                             <?php foreach($colors as $c): ?>
                                 <option value="<?php echo $c; ?>">
@@ -45,13 +39,12 @@
                             <?php endforeach; ?>
                         </select>
                     </td>
-                    <td class="right">
+                    <td>
                         <?php echo $colors[$i] ?>
                     </td>
                 </tr>
             <?php endfor; ?>
         </table>
-        <?php endif; ?>
         <h1>Coordinate Grid</h1>
         <table>
             <?php for($n = 0; $n < $number + 1; $n++): ?>
@@ -73,11 +66,6 @@
                 </tr>
             <?php endfor; ?>
         </table>
-        <form method="POST">
-            <input type="hidden" name="page" value="print">
-            <input type="hidden" name="number" value="<?= $number ?>">
-            <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
-            <button type="submit" name="page" value="print">View Printable Version</button>
-        </form>
+    
 </body>
 </html>

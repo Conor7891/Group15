@@ -53,4 +53,9 @@ $page = $_POST['page'] ?? 'index';
     ?>
     </div>
 </body>
+<?php if ($page != 'print'): ?>
+<footer style="text-align: center; justify-content: center;">
+    <p>&copy 2026 PixelPushers inc.</p>
+</footer>
+<?php endif; ?>
 </html>

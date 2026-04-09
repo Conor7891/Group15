@@ -131,3 +131,12 @@ body {
     background-color: var(--off-white);
     color: var(--dark-text);
 }
+
+.inputForm input, .inputForm button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.ColorDiv {
+    padding-top: 75px;
+}

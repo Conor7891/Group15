@@ -24,14 +24,18 @@
 </head>
 <body>
     <p>Enter the grid size and number of colors below to generate your coordinate sheets</p>
-    <form method="POST">
+    <form class="inputForm" method="POST">
         <input type="hidden" name="page" value="color">
         <label>Rows & Columns (1-26):</label>
         <input type="number" min="1" max="26" name="number" required>
+        <br>
         <label>Number of Colors (1-10):</label>
         <input type="number" min="1" max="10" name="number_of_colors" required>
+        <br>
         <button type="submit">Generate</button>
+        <br>
     </form>
+    <div class="ColorDiv">
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
         <h1>Color Selection</h1>
         <table class="colorlist">
@@ -80,5 +84,6 @@
             <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
             <button type="submit" name="page" value="print">View Printable Version</button>
         </form>
+        </div>
 </body>
 </html>

@@ -27,9 +27,9 @@
     <form method="POST">
         <input type="hidden" name="page" value="color">
         <label>Rows & Columns (1-26):</label>
-        <input type="number" min="1" max="26" name="number">
+        <input type="number" min="1" max="26" name="number" required>
         <label>Number of Colors (1-10):</label>
-        <input type="number" min="1" max="10" name="number_of_colors">
+        <input type="number" min="1" max="10" name="number_of_colors" required>
         <button type="submit">Generate</button>
     </form>
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>

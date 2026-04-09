@@ -34,7 +34,6 @@ $page = "about";
             <h4>Conor Holland</h4>
             <h5>Programmer</h5>
             <p>Conor is a passionate developer who loves to create innovative solutions. Originally from Scotland, Conor brings a unique perspective to our development team.
-                Conor enjoys getting ripped, playing video games, and exploring new technologies in his free time.
             </p>
         </div>
     </div>

@@ -11,7 +11,8 @@ $page = $_POST['page'] ?? 'index';
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta http-equiv="pragma" content="no-cache">
-    <link rel="stylesheet" href="./style/<? echo $page ?>.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/<?php echo $page; ?>.css">
 </head>
 <header>
     <nav>

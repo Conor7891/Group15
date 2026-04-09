@@ -5,40 +5,52 @@ gap: 10px;
 }
 
 .div1 { 
-    background-image: linear-gradient(45deg, yellow, hotpink,teal);
+    background-image: linear-gradient(45deg, var(--teal), var(--purple), var(--orange));
+    color: var(--off-white); 
     grid-area: 1 / 1 / 2 / 7; 
     padding: 10px 20px;
 }
+
 .div2 { 
-    background-color:#000000;
+    background-color: var(--dark-blue);
     grid-area: 2 / 1 / 3 / 7; 
     padding: 10px 20px;
 }
+
 .div3 { grid-area: 3 / 2 / 4 / 6; }
+
+.div4, .div5, .div6, .div7 {
+    background-color: var(--off-white);
+    color: var(--dark-text);
+    border-radius: 10px;
+    padding: 15px;
+}
+
 .div4 { grid-area: 4 / 2 / 7 / 3; }
 .div5 { grid-area: 4 / 3 / 7 / 4; }
 .div6 { grid-area: 4 / 4 / 7 / 5; }
 .div7 { grid-area: 4 / 5 / 7 / 6; }
+
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
-    border-radius:25px;
+  background-color: var(--dark-blue);
+  border-radius: 25px;
 }
 
 ul li {
   float: left;
 }
 
+
 button {
   display: block;
-  background-color: #333333;
-  color: #ffffff;
-  border-width: 1px;
-  border-style: solid;
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+  border: 1px solid var(--teal);
   text-align: center;
   float: left;
   margin: 0;
@@ -50,8 +62,8 @@ button {
 }
 
 button:hover {
-  color:white;
-  background-color: #7e7e7e;
+  color: var(--off-white);
+  background-color: var(--teal);
   border-radius: 5px;
 }
 
@@ -65,7 +77,8 @@ img {
 }
 
 .divBody {
-    background-color: #be5959;
+    background-color: var(--off-white);
+    color: var(--dark-text);
 }
 
 @font-face {

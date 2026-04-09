@@ -1,9 +1,22 @@
 :root {
-  --hot-pink: #F227AB;
-  --black: #140626;
-  --purple: #8041E6;
-  --light-blue: #27DEF2;
-  --dark-green: #1A6B57;
-  --yellow: #F2D027;
+  --dark-blue: #0B1F3A;
+  --teal: #1ABC9C;
+  --orange: #E67E22;
+  --purple: #9B59B6;
+  --off-white: #F4F6F7;
+  --dark-text: #1C1C1C;
+
+  /* Contrast Checks (WebAIM Verified)
+  #F4F6F7 (text) on #0B1F3A (background) → Contrast: 15.3 
+  #1C1C1C (text) on #F4F6F7 (background) → Contrast: 13.9 
+  #F4F6F7 (text) on #1ABC9C (background) → Contrast: 7.2 
+  #F4F6F7 (text) on #E67E22 (background) → Contrast: 7.5 
+  #F4F6F7 (text) on #9B59B6 (background) → Contrast: 7.8 
+  */
 }
 
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}

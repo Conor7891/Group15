@@ -22,10 +22,12 @@
     <link rel="stylesheet" href="./style/print.css">
 </head>
 <body>
-    <img src = "images/Logo.jpg" alt = "PixelPushers Logo" class = "logo">
+  <div class="container">
 
-    <h1>PixelPushers</h1>
-    <p>Color Selector Company</p>
+    <img src="images/Logo.jpg" class="logo">
+
+    <h1>Pixel Pushers</h1>
+    <p>Professional Color Coordination Tools — Printable View</p>
     <h1>Color Selection</h1>
         <table>
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>

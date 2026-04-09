@@ -1,7 +1,7 @@
 <?php
 $page = "about";
 ?>
-    <div class="parent">
+     <div class="parent">  
         <div class="div3">
             <h1>Meet the Team</h1>
             <p>We are highly dedicated programmers who love to write backend code. We are committed to delivering the best possible color generator, with ease of use for the end user. </p>        </div>

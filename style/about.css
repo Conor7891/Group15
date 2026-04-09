@@ -95,8 +95,8 @@ img {
 
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('./fonts/JetBrainsMonoNLNFP-Medium.woff2') format('woff2'),
-         url('./fonts/JetBrainsMonoNLNFP-Medium.woff') format('woff');
+    src: url('../fonts/JetBrainsMonoNLNFP-Medium.woff2') format('woff2'),
+         url('../fonts/JetBrainsMonoNLNFP-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

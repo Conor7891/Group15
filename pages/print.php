@@ -1,12 +1,13 @@
 <?php
     $number = $_POST['number'] ?? 0; 
     $number_of_colors = $_POST['number_of_colors'] ?? 0;
+    $isValid = true;
 
     if ($number < 1 || $number > 26) {
-        echo "INVALID";
+        $isValid = false;
     }
     if ($number_of_colors < 1 || $number_of_colors > 10) {
-        echo "INVALID";
+        $isValid = false;
     }
 
     $colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
@@ -30,6 +31,7 @@
     <p>Professional Color Coordination Tools — Printable View</p>
     <h1>Color Selection</h1>
         <table>
+            <?php if ($isValid): ?>
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
                     <td>
@@ -68,6 +70,7 @@
                 </tr>
             <?php endfor; ?>
         </table>
+        <?php endif; ?>
     
 </body>
 </html>

@@ -10,7 +10,7 @@ $page = "about";
             <h4>Luke Livingston</h4>
             <h5>Programmer</h5>
             <p>Luke is a hard working member of this team, contributing to much of the styling for the website and some php scripting.
-                Luke enjoys hiking, bar hopping, drinking, getting drunk, driving, and sleeping all in that order
+                Luke enjoys hiking, gaming, movies, reading, and hanging out with friends. A side hobby is video game development
             </p>
         </div>
         <div class="div5">

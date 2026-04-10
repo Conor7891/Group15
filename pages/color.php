@@ -48,8 +48,8 @@
                     <td class="left">
                         <select name="selectedColors[]">
                             <?php foreach($colors as $c): ?>
-                                <option value="<?php echo $c; ?>">
-                                    <?php echo $c; ?>
+                                <option value="<?= $c ?>" <?= ($c === $colors[$i]) ? 'selected' : '' ?>>
+                                    <?= $c ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>

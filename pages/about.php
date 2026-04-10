@@ -18,7 +18,7 @@ $page = "about";
             <h4>Tyler Couse</h4>
             <h5>Programmer</h5>
             <p>Tyler is an extremely devoted computer science student. He has contributed heavily to the front end. 
-                Tyler loves smoking bowls, playing overwatch, climbing 14ers, snowboarding, camping, and drinking
+                Tyler loves playing overwatch, climbing 14ers, snowboarding, and camping.
             </p>
         </div>
         <div class="div6">

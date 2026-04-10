@@ -42,14 +42,18 @@
     <div class="ColorDiv">
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && $isValid): ?>
         <h1>Color Selection</h1>
-        <table class="colorlist">
+        <form method="POST" target="_blank">
+            <input type="hidden" name="page" value="print">
+            <input type="hidden" name="number" value="<?= $number ?>">
+            <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
+            <table class="colorlist">
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
                     <td class="left">
-                        <select>
+                        <select name="selectedColors[]">
                             <?php foreach($colors as $c): ?>
-                                <option value="<?php echo $c; ?>">
-                                    <?php echo $c; ?>
+                                <option value="<?= $c ?>" <?= ($c === $colors[$i]) ? 'selected' : '' ?>>
+                                    <?= $c ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
@@ -59,7 +63,10 @@
                     </td>
                 </tr>
             <?php endfor; ?>
-        </table>
+            </table>
+            <button type="submit" name="page" value="print">View Printable Version</button>
+        </form>
+        <?php endif; ?>
         <h1>Coordinate Grid</h1>
         <table class="grid">
             <?php for($n = 0; $n < $number + 1; $n++): ?>
@@ -81,12 +88,7 @@
                 </tr>
             <?php endfor; ?>
         </table>
-        <form method="POST" target="_blank">
-            <input type="hidden" name="page" value="print">
-            <input type="hidden" name="number" value="<?= $number ?>">
-            <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
-            <button type="submit" name="page" value="print">View Printable Version</button>
-        </form>
+        
         </div>
         <?php else: ?>
             <?php foreach($errors as $e): ?>

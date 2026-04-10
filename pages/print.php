@@ -29,20 +29,15 @@
 
     <h1>Pixel Pushers</h1>
     <p>Professional Color Coordination Tools — Printable View</p>
+    <?php if ($isValid): ?>
+    <?php $selectedColors = $_POST['selectedColors'] ?? [];?>
     <h1>Color Selection</h1>
-        <table class="colorlist">
-            <?php if ($isValid): ?>
+        <table>  
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
-                    <td class="left">
-                        <select>
-                            <?php foreach($colors as $c): ?>
-                                <option value="<?php echo $c; ?>">
-                                    <?php echo $c; ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                    </td class="right">
+                    <td>
+                        <?= $selectedColors[$i] ?? "Red" ?>
+                    </td>
                     <td>
                         <?php echo $colors[$i] ?>
                     </td>

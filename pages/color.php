@@ -1,17 +1,19 @@
 <?php
-    $number = $_POST['number'] ?? 1; 
-    $number_of_colors = $_POST['number_of_colors'] ?? 1;
+    $number = $_POST['number'] ?? null; 
+    $number_of_colors = $_POST['number_of_colors'] ?? null;
     $isValid = true;
-
+    
     $errors = [];
-
-    if ($number < 1 || $number > 26) {
-        $errors[] = "Number of Rows and Columns not in range !!!";
-        $isValid = false;
-    }
-    if ($number_of_colors < 1 || $number_of_colors > 10) {
-        $errors[] = "Number of columns not in range !!!";
-        $isValid = false;
+    
+    if (isset($_POST['x'])) {
+        if ($number < 1 || $number > 26) {
+            $errors[] = "Number of Rows and Columns not in range !!!";
+            $isValid = false;
+        }
+        if ($number_of_colors < 1 || $number_of_colors > 10) {
+            $errors[] = "Number of columns not in range !!!";
+            $isValid = false;
+        }
     }
 
     $colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
@@ -23,7 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE</title>
+    <title>COLOR PAGE</title>
     <link rel="stylesheet" href="./style/color.css">
 </head>
 <body>
@@ -36,16 +38,12 @@
         <label>Number of Colors (1-10):</label>
         <input type="number" name="number_of_colors" required>
         <br>
-        <button type="submit">Generate</button>
+        <button type="submit" name="x">Generate</button>
         <br>
     </form>
     <div class="ColorDiv">
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && $isValid): ?>
+    <?php if (isset($_POST['x']) && $isValid): ?>
         <h1>Color Selection</h1>
-        <form method="POST" target="_blank">
-            <input type="hidden" name="page" value="print">
-            <input type="hidden" name="number" value="<?= $number ?>">
-            <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
             <table class="colorlist">
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
@@ -64,9 +62,6 @@
                 </tr>
             <?php endfor; ?>
             </table>
-            <button type="submit" name="page" value="print">View Printable Version</button>
-        </form>
-        <?php endif; ?>
         <h1>Coordinate Grid</h1>
         <table class="grid">
             <?php for($n = 0; $n < $number + 1; $n++): ?>
@@ -88,9 +83,15 @@
                 </tr>
             <?php endfor; ?>
         </table>
-        
+        <form method="POST" target="_blank">
+            <input type="hidden" name="page" value="print">
+            <input type="hidden" name="number" value="<?= $number ?>">
+            <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
+            <button type="submit" name="page" value="print">View Printable Version</button>
+        </form>
         </div>
-        <?php else: ?>
+        <?php endif; ?>
+        <?php if (isset($_POST['x']) && !$isValid): ?>
             <?php foreach($errors as $e): ?>
                 <?php echo $e; ?>
                 <br>

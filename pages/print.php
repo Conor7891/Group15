@@ -32,13 +32,13 @@
     <?php if ($isValid): ?>
     <?php $selectedColors = $_POST['selectedColors'] ?? [];?>
     <h1>Color Selection</h1>
-        <table>  
+        <table class="colorlist">  
             <?php for($i = 0; $i < $number_of_colors; $i++): ?>
                 <tr>
-                    <td>
+                    <td class="left">
                         <?= $selectedColors[$i] ?? "Red" ?>
                     </td>
-                    <td>
+                    <td class="right">
                         <?php echo $colors[$i] ?>
                     </td>
                 </tr>

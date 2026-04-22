@@ -27,23 +27,3 @@ if (!mysqli_real_connect($conn, DB_HOST, DB_USER, DB_PASS, DB_NAME)) {
     die('Connection failed: ' . mysqli_connect_error());
 }
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CS 312 — Lab: DB Getting Connected</title>
-    <style>
-        body  { font-family: monospace; padding: 32px; background: #f9f9f9; color: #222; }
-        h1    { font-size: 20px; }
-        table { border-collapse: collapse; background: #fff; margin-top: 16px; }
-        th    { background: #ddd; text-align: left; }
-        td, th { border: 1px solid #ccc; padding: 8px 12px; font-size: 13px; }
-    </style>
-</head>
-<body>
-
-<h1>CS 312 — Lab: DB Getting Connected</h1>
-</body>
-</html>

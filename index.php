@@ -27,6 +27,7 @@ $page = $_POST['page'] ?? 'index';
                     <li><button name="page" value="index">Home</button></li>
                     <li><button name="page" value="about">About Us</button></li>
                     <li><button name="page" value="color">Color Coordinator</button></li>
+                    <li><button name="page" value="color-selection">Color Selection</button></li>
                 </form>
             </ul>
         </div>
@@ -45,6 +46,9 @@ $page = $_POST['page'] ?? 'index';
                 break;
             case 'color':
                 include './color.php';
+                break;
+            case 'color-selection':
+                include './colors.php';
                 break;
             case 'print':
                 include './print.php';

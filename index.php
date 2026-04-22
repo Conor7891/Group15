@@ -38,16 +38,16 @@ $page = $_POST['page'] ?? 'index';
     <?php
         switch ($page) {
             case 'index':
-                include 'pages/home.php';
+                include 'home.php';
                 break;
             case 'about':
-                include 'pages/about.php';
+                include 'about.php';
                 break;
             case 'color':
-                include 'pages/color.php';
+                include 'color.php';
                 break;
             case 'print':
-                include 'pages/print.php';
+                include 'print.php';
                 break;
         }
     ?>

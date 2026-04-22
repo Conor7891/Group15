@@ -7,13 +7,13 @@ hex_value — unique, not null
 */
 
 create table colors (
-    id INT UNIQUE NOT NULL AUTO INCREMENT,
+    id INT UNIQUE NOT NULL AUTO_INCREMENT,
     name VARCHAR(10) NOT NULL UNIQUE,
     hex_value char(7) NOT NULL UNIQUE,
     PRIMARY KEY (id)
-);
+) AUTO_INCREMENT = 1;
 
-insert into colors values
+insert into colors (name, hex_value) values
 ('Red', '#FF0000'),
 ('Orange', '#FFA500'),
 ('Yellow', '#FFFF00'),

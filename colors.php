@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+
 ?>
 <div class="header">
     <h1>Color Selection</h1>
@@ -124,3 +125,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" name="action" value="delete">Delete Color</button>
     </form>
 </div>
+<?php 
+$sql = "SELECT name, hex_value from colors";
+$result = $conn->query($sql);
+echo "<table border='1'>";
+echo "<tr><th>Name</th><th>Hex</th><th>Preview</th></tr>";
+
+if ($result->num_rows === 0) {
+    echo "<tr><td colspan='2'>No colors found</td></tr>";
+}
+
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row["name"] . "</td>";
+    echo "<td>" . $row["hex_value"] . "</td>";
+    echo "<td></td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+?>

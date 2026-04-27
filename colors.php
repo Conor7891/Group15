@@ -55,14 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
 
         $sql = 'SELECT COUNT(*) FROM colors';
-        $result = $conn->query($sql);
+        $count_res = $conn->query($sql);
+        $color_count = $count_res->fetch_row()[0];
 
-        if ($result <= 2) {
+        if ($color_count <= 2) {
             $errors[] = 'Cannot Delete';
         }
 
         if (!$errors) {
-            $sql = "DELETE FROM colors WHERE name = $name";
+            $sql = "DELETE FROM colors WHERE name = '$name'";
             $results = $conn->query($sql);
         }
     }
@@ -72,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Color Selection</h1>
     <p>Manage colors to use with the color coordinator</p>
 </div>
+
 <div class="color-add">
     <h2>Add a Color</h2>
     <form method="POST" action="?page=color-selection">
@@ -85,14 +87,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" name="action" value="add">Add Color</button>
     </form>
 </div>
+
 <div class="color-edit">
     <h2>Edit a Color</h2>
     <form method="POST" action="?page=color-selection">
         <input type="hidden" name="page" value="color-selection">
         <label>Select Color:</label>
-        <select class="colorDropdown" data-index="<?= $i ?>">
+        <select name="name" class="colorDropdown">
             <?php foreach($allColors as $c): ?>
-            <option name="name" value="<?= htmlspecialchars($c['name']) ?>"
+            <option value="<?= htmlspecialchars($c['name']) ?>"
                 <?= ($c['id'] === $defaultColor['id']) ? 'selected' : '' ?>>
                 <?= htmlspecialchars($c['name']) ?>
             </option>
@@ -106,5 +109,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="newHex" required>
         <br>
         <button type="submit" name="action" value="edit">Modify Color</button>
+    </form>
+</div>
+
+<div class="color-remove">
+    <h2>Delete a Color</h2>
+    <form method="POST" action="?page=color-selection">
+        <input type="hidden" name="page" value="color-selection">
+        <select name="name" class="colorDropdown">
+            <?php foreach($allColors as $c): ?>
+            <option value="<?= htmlspecialchars($c['name']) ?>"><?= htmlspecialchars($c['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+        <button type="submit" name="action" value="delete">Delete Color</button>
     </form>
 </div>

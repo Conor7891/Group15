@@ -42,7 +42,7 @@
         <label>Number of Colors (1-<?= $maxColors ?>):</label>
         <input type="number" name="number_of_colors" required>
         <br>
-        <button type="submit" name="x">Generate</button>
+        <button class="rounded-btn" type="submit" name="x">Generate</button>
         <br>
     </form>
 
@@ -97,7 +97,7 @@
         <input type="hidden" name="page" value="print">
         <input type="hidden" name="number" value="<?= $number ?>">
         <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">
-        <button type="button" onclick="submitPrintForm()">View Printable Version</button>
+        <button class="rounded-btn" type="button" onclick="submitPrintForm()">View Printable Version</button>
 </form>
 
     <?php endif; ?>

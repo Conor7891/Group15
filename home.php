@@ -5,7 +5,7 @@
                 use for website design, paintings, presentations, or more! Simply press the button below to start.
         </p>
         <form method="GET">
-            <button id="ColorButton" type="submit" name="page" value="color">Try the Color Coordinator</button>
+            <button class="rounded-btn" id="ColorButton" type="submit" name="page" value="color">Try the Color Coordinator</button>
         </form>
     </div>
     <div class="div4"></div>

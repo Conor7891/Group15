@@ -58,8 +58,12 @@ button {
   transition: border-radius 0.4s ease, 
               background-color 0.4s ease,
               color 0.4s ease;
+  cursor: pointer;
 }
-
+.rounded-btn
+{
+    border-radius: 5px;
+}
 button:hover {
   color: var(--off-white);
   background-color: var(--teal);

@@ -6,11 +6,11 @@
     $isValid = true;
     $errors = [];
 
-
     $result = $conn->query("SELECT id, name, hex_value FROM colors ORDER BY id");
     $allColors = $result->fetch_all(MYSQLI_ASSOC);
     $maxColors = count($allColors);
-
+    
+  
     if (isset($_POST['x'])) {
         if ($number < 1 || $number > 26) {
             $errors[] = "Number of Rows and Columns not in range (1-26)!";

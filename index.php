@@ -1,6 +1,6 @@
 <?php 
 require __DIR__ . '/db.php';
-$page = $_POST['page'] ?? 'index';
+$page = $_GET['page'] ?? 'index';
 
 $colorsReturned = $conn->query('SELECT * FROM colors');
 if ($colorsReturned->num_rows > 0) {
@@ -32,7 +32,7 @@ echo json_encode($colors);
         </div>
         <div class="div2">
             <ul>
-                <form method="POST">
+                <form method="GET">
                     <li><button name="page" value="index">Home</button></li>
                     <li><button name="page" value="about">About Us</button></li>
                     <li><button name="page" value="color">Color Coordinator</button></li>

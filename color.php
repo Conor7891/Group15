@@ -92,7 +92,7 @@
                 </tr>
             <?php endfor; ?>
         </table>
-        <form method="POST" target="_blank">
+        <form method="POST" action="?page=print" target="_blank">
             <input type="hidden" name="page" value="print">
             <input type="hidden" name="number" value="<?= $number ?>">
             <input type="hidden" name="number_of_colors" value="<?= $number_of_colors ?>">

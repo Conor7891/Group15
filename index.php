@@ -57,6 +57,9 @@ if ($colorsReturned->num_rows > 0) {
             case 'print':
                 include 'print.php';
                 break;
+            case 'color-selection':
+                include 'colors.php';
+                break;
         }
     ?>
     </div>

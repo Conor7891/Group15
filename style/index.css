@@ -9,6 +9,12 @@ gap: 10px;
     color: var(--off-white); 
     grid-area: 1 / 1 / 2 / 7; 
     padding: 10px 20px;
+    justify-content: left;
+}
+
+div {
+    justify-content: center;
+    display: grid;
 }
 
 .div2 { 

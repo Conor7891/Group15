@@ -9,6 +9,7 @@
     color: var(--off-white);
     grid-area: 1 / 1 / 2 / 7; 
     padding: 10px 20px;
+    justify-content: left;
 }
 
 .div2 { 
@@ -172,4 +173,9 @@ table.grid th {
 
 table.grid th {
     font-size: 20px;
+}
+
+div {
+    justify-content: center;
+    display: grid;
 }

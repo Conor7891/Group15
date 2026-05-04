@@ -6,6 +6,8 @@ hex_value — unique, not null
 
 */
 
+drop table if exists colors;
+
 create table colors (
     id INT UNIQUE NOT NULL AUTO_INCREMENT,
     name VARCHAR(10) NOT NULL UNIQUE,

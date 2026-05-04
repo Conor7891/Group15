@@ -39,12 +39,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-        $sql = "SELECT COUNT(*) FROM colors WHERE name = '$name'";
+        $sql = "SELECT COUNT(*) FROM colors WHERE hex_value = '$hex'";
         $name_res = $conn->query($sql);
+        $name_count = $name_res->fetch_row()[0];
+        $sql = "SELECT COUNT(*) FROM colors WHERE name = '$name'";
+        $hex_res = $conn->query($sql);
+        $hex_count = $hex_res->fetch_row()[0];
 
-        /* if ($name_res != 0 || $hex_res != 0) {
+        if ($name_count != 0 || $hex_count != 0) {
             $errors[] = 'Cannot place duplicates';
-        } */
+        }
+
         if (!$errors) {
             $sql = "UPDATE colors SET name = '$newName', hex_value = '$newHex' WHERE name = '$name'";
             $result = $conn->query($sql);
@@ -145,3 +150,8 @@ while ($row = $result->fetch_assoc()) {
 
 echo "</table>";
 ?>
+<div>
+<?php foreach($errors as $e): ?>
+            <?= htmlspecialchars($e) ?><br>
+        <?php endforeach; ?>
+</div>

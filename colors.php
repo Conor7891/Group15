@@ -9,6 +9,8 @@ $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
+    $result = $conn->query("SELECT id, name, hex_value FROM colors ORDER BY id");
+    $allColors = $result->fetch_all(MYSQLI_ASSOC);
 
     if ($action === 'add') {
         $name = $_POST['name'];
@@ -64,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $color_count = $count_res->fetch_row()[0];
 
         if ($color_count <= 2) {
-            $errors[] = 'Cannot Delete';
+            $errors[] = 'Cannot have less than 2 colors in the database';
         }
 
         if (!$errors) {
@@ -120,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="color-remove">
     <h2>Delete a Color</h2>
-    <form method="POST" action="?page=color-selection">
+    <form method="POST" action="?page=color-selection" onsubmit="return confirm('Are You SURE, LIKE REALLY REALLY SURE, THERE IS NO GOING BACK');">
         <input type="hidden" name="page" value="color-selection">
         <select name="name" class="colorDropdown">
             <?php foreach($allColors as $c): ?>
